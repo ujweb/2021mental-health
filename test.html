@@ -6,15 +6,23 @@
 	<title>Document</title>
 </head>
 <body>
-	<video id="screenVideo" muted autoplay controls src="https://web.commonhealth.com.tw/_test-by-yenpingfan/2021mental-health/images/s1-mb.mp4" webkit-playsinline="true" playsinline="true" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="true" x5-video-orientation="portraint" style="object-fit:fill;"></video>
+	<video id="videoMobile1" muted autoplay loop src="https://web.commonhealth.com.tw/_test-by-yenpingfan/2021mental-health/images/s1-mb.mp4" webkit-playsinline="true" playsinline="true"></video>
+	<video id="videoMobile2" muted autoplay loop src="https://web.commonhealth.com.tw/_test-by-yenpingfan/2021mental-health/images/s2-mb.mp4" webkit-playsinline="true" playsinline="true"></video>
+	<video id="videoMobile3" muted autoplay loop src="https://web.commonhealth.com.tw/_test-by-yenpingfan/2021mental-health/images/s3-mb.mp4" webkit-playsinline="true" playsinline="true"></video>
 
 	<script>
-		var screenVideo=document.getElementById("screenVideo");
+		var videoMobile1=document.getElementById("videoMobile1"),
+			videoMobile2=document.getElementById("videoMobile2"),
+			videoMobile3=document.getElementById("videoMobile3");
 		document.body.addEventListener('mousedown', function(){
-			screenVideo.muted = false;
+			videoMobile1.muted = false;
+			videoMobile2.muted = false;
+			videoMobile3.muted = false;
 		}, false);
 		document.body.addEventListener('touchstart', function(){
-			screenVideo.muted = false;
+			videoMobile1.muted = false;
+			videoMobile2.muted = false;
+			videoMobile3.muted = false;
 		}, false);
 	</script>
 </body>
