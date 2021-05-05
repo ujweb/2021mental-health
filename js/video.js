@@ -35,6 +35,6 @@ $("video").prop('muted', true);
 $("body").mouseover(function () {
     $("video").prop('muted', false);
 });
-$("body").touchend(function () {
+$("body").click(function () {
     $("video").prop('muted', false);
 });
