@@ -6945,7 +6945,7 @@ $(document)
         continue;
       }
       // 判斷是否有推薦
-      var recommend = item.recommend == 1 ? ' <span class="recommend">推薦</span>' : '';
+      var recommend = item.recommend == 1 ? ' <span class="recommend">推薦名單</span>' : '';
       answer.push({
         name: item.name + recommend,
         phone: item.phone,

@@ -203,7 +203,7 @@ optgroup {
 }
 
 body {
-  padding-top: 70px;
+  /* padding-top: 70px; */
   font-size: 1.125rem;
   font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "Microsoft JhengHei", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -311,7 +311,7 @@ footer ul li a, footer ul li a:hover {
 
 @media (max-width: 768px) {
   body {
-    padding-top: 56px;
+    /* padding-top: 56px; */
   }
   header {
     position: fixed;
