@@ -35,6 +35,6 @@ $("video").prop('muted', true);
 $("body").mouseover(function () {
     $("video").prop('muted', false);
 });
-window.addEventListener('touchstart', function videoStart() {
+window.addEventListener('touchstart', function videoScroll() {
     $("video").prop('muted', false);
 });
