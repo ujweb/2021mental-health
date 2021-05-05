@@ -5,8 +5,34 @@ var iPad = navigator.userAgent.match(/iPad/i) != null;
 
 if ( iPhone || android || iPad ) {
     $('video.desktop').remove();
+    var videoMobile1=document.getElementById("videoMobile1"),
+        videoMobile2=document.getElementById("videoMobile2"),
+        videoMobile3=document.getElementById("videoMobile3");
+    document.body.addEventListener('mousedown', function(){
+        videoMobile1.muted = false;
+        videoMobile2.muted = false;
+        videoMobile3.muted = false;
+    }, false);
+    document.body.addEventListener('touchstart', function(){
+        videoMobile1.muted = false;
+        videoMobile2.muted = false;
+        videoMobile3.muted = false;
+    }, false);
 } else {
     $('video.mobile').remove();
+    var videoDesktop1=document.getElementById("videoDesktop1"),
+        videoDesktop2=document.getElementById("videoDesktop2"),
+        videoDesktop3=document.getElementById("videoDesktop3");
+    document.body.addEventListener('mousedown', function(){
+        videoDesktop1.muted = false;
+        videoDesktop2.muted = false;
+        videoDesktop3.muted = false;
+    }, false);
+    document.body.addEventListener('touchstart', function(){
+        videoDesktop1.muted = false;
+        videoDesktop2.muted = false;
+        videoDesktop3.muted = false;
+    }, false);
 }
 
 // 
@@ -32,26 +58,3 @@ function videoScroll() {
 
 // 
 $("video").prop('muted', true);
-
-var videoDesktop1=document.getElementById("videoDesktop1"),
-    videoDesktop2=document.getElementById("videoDesktop2"),
-    videoDesktop3=document.getElementById("videoDesktop3"),
-    videoMobile1=document.getElementById("videoMobile1"),
-    videoMobile2=document.getElementById("videoMobile2"),
-    videoMobile3=document.getElementById("videoMobile3");
-document.body.addEventListener('mousedown', function(){
-    videoDesktop1.muted = false;
-    videoDesktop2.muted = false;
-    videoDesktop3.muted = false;
-    videoMobile1.muted = false;
-    videoMobile2.muted = false;
-    videoMobile3.muted = false;
-}, false);
-document.body.addEventListener('touchstart', function(){
-    videoDesktop1.muted = false;
-    videoDesktop2.muted = false;
-    videoDesktop3.muted = false;
-    videoMobile1.muted = false;
-    videoMobile2.muted = false;
-    videoMobile3.muted = false;
-}, false);
