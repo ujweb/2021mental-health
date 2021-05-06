@@ -1,17 +1,4 @@
-﻿// Smooth scrolling using jQuery easing
-$('a.smooth-scroll[href*="#"]:not([href="#"])').click(function () {
-	if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-		var target = $(this.hash);
-		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-		if (target.length) {
-			$('html, body').animate({
-				scrollTop: (target.offset().top)
-			}, 1000);
-			return false;
-		}
-	}
-});
-var width = $(window).width();
+﻿var width = $(window).width();
 var ua = navigator.userAgent.toLowerCase();
 var iPad = navigator.userAgent.match(/iPad/i) != null;
 var iPhone = (navigator.userAgent.match(/iPhone/i) != null) || (navigator.userAgent.match(/iPod/i) != null);

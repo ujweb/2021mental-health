@@ -6902,6 +6902,19 @@ $(document)
   .ready(function () {
     $('.show_result').hide();
     cityTown();
+    // Smooth scrolling using jQuery easing
+    $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function () {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: (target.offset().top)
+          }, 1000);
+          // return false;
+        }
+      }
+    });
   })
   // 選擇縣市時更新鄉鎮選單
   .on('change', '#city', function () {
