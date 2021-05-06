@@ -59,9 +59,10 @@ function enableScroll() {
 
 $(function () {
 	$('body').addClass('noscroll');
-	$('.smooth-scroll').click(function () {
-		$('body').removeClass('noscroll');
+	$('.test-start').click(function () {
+		$('.op-block').slideUp(700);
 		disableScroll();
+		$('body').removeClass('noscroll');
 	});
 });
 
@@ -122,7 +123,7 @@ var gameHtml = "";
 
 $(document).ready(function () {
 	for (i = 0; i < quiz.length; i++) {
-		gameHtml += "<section class='question-block' id='osq" + i + "'><div class='container'><div class='row justify-content-md-center'><div class='img-block col-12 col-md-5'>" + quiz[i]['img'] + "</div><div class='txt-block col-12 col-md-6 offset-md-1'><div class='schedule-range'><div class='schedule-line schedule-line--" + (i + 1) + "'></div></div><h3 id='q" + i + "'>" + quiz[i]['question'] + "</h3><div class='select-block'><div class='d-flex justify-content-between'><div class='h5 mx-1'>輕</div><div class='h5 mx-1'>重</div></div><div class='answer'><div class='d-flex flex-row-reverse justify-content-between rate'><input type='radio' id='star-" + i + "--5' name='rate-" + i + "' /><label " + quiz[i]['gtm'] + " for='star-" + i + "--5' class='choice star-" + i + "--5' value='4'><span>" + quiz[i]['choices'][4] + "</span></label><input type='radio' id='star-" + i + "--4' name='rate-" + i + "' /><label " + quiz[i]['gtm'] + " for='star-" + i + "--4' class='choice star-" + i + "--4' value='3'><span>" + quiz[i]['choices'][3] + "</span></label><input type='radio' id='star-" + i + "--3' name='rate-" + i + "' /><label " + quiz[i]['gtm'] + " for='star-" + i + "--3' class='choice star-" + i + "--3' value='2'><span>" + quiz[i]['choices'][2] + "</span></label><input type='radio' id='star-" + i + "--2' name='rate-" + i + "' /><label " + quiz[i]['gtm'] + " for='star-" + i + "--2' class='choice star-" + i + "--2' value='1'><span>" + quiz[i]['choices'][1] + "</span></label><input type='radio' id='star-" + i + "--1' name='rate-" + i + "' /><label " + quiz[i]['gtm'] + " for='star-" + i + "--1' class='choice star-" + i + "--1' value='0'><span>" + quiz[i]['choices'][0] + "</span></label></div></div>";
+		gameHtml += "<section class='question-block' id='osq" + i + "'><div class='container'><div class='row justify-content-md-center'><div class='img-block col-9 col-md-5'>" + quiz[i]['img'] + "</div><div class='txt-block col-12 col-md-6 offset-md-1'><div class='schedule-range'><div class='schedule-line schedule-line--" + (i + 1) + "'></div></div><h3 id='q" + i + "'>" + quiz[i]['question'] + "</h3><div class='select-block'><div class='d-flex justify-content-between'><div class='h5 mx-1'>輕</div><div class='h5 mx-1'>重</div></div><div class='answer'><div class='d-flex flex-row-reverse justify-content-between rate'><input type='radio' id='star-" + i + "--5' name='rate-" + i + "' /><label " + quiz[i]['gtm'] + " for='star-" + i + "--5' class='choice star-" + i + "--5' value='4'><span>" + quiz[i]['choices'][4] + "</span></label><input type='radio' id='star-" + i + "--4' name='rate-" + i + "' /><label " + quiz[i]['gtm'] + " for='star-" + i + "--4' class='choice star-" + i + "--4' value='3'><span>" + quiz[i]['choices'][3] + "</span></label><input type='radio' id='star-" + i + "--3' name='rate-" + i + "' /><label " + quiz[i]['gtm'] + " for='star-" + i + "--3' class='choice star-" + i + "--3' value='2'><span>" + quiz[i]['choices'][2] + "</span></label><input type='radio' id='star-" + i + "--2' name='rate-" + i + "' /><label " + quiz[i]['gtm'] + " for='star-" + i + "--2' class='choice star-" + i + "--2' value='1'><span>" + quiz[i]['choices'][1] + "</span></label><input type='radio' id='star-" + i + "--1' name='rate-" + i + "' /><label " + quiz[i]['gtm'] + " for='star-" + i + "--1' class='choice star-" + i + "--1' value='0'><span>" + quiz[i]['choices'][0] + "</span></label></div></div>";
 		if ( quiz[i]['comment'] !== "" ) {
 			gameHtml += "<h5 class='comment'><span>仔細回想最近一週，對於下列６個問題的困擾程度：</span><span>完全沒有給0分、輕微給1分、中等程度給2分、厲害給3分、非常厲害給4分</span></h5>";
 		}
@@ -190,6 +191,8 @@ $(document).ready(function () {
 		a6 = 0;
 		question = 0;
 		userSelect = [0, 0, 0, 0, 0, 0];
+		$('.op-block').show();
+		$('.op-block > div').scrollTop(0);
 		$('body').addClass('noscroll');
 		$("#resultSection, .result-block").hide();
 		$(".choice").siblings('.selected').removeClass('selected');
