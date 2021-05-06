@@ -183,6 +183,9 @@ $imgSize: 100%;
 		position: absolute;
 		top: 0;
 		left: 0;
+		@include mobile {
+			left: 10%;
+		}
 	}
 	&.illustration-1 .img-move {
 		animation: illustration-1 1s infinite alternate linear;
@@ -334,7 +337,7 @@ $imgSize: 100%;
 
 //動畫end
 
-@include mobile{
+@include mobile {
 	body.noscroll {
 		height: 100%;
 		min-height: 100%;
@@ -347,6 +350,8 @@ $imgSize: 100%;
 			padding-top: 40px;
 			padding-bottom: 40px;
 			overflow: scroll;
+			// overflow: auto;
+    		-webkit-overflow-scrolling: touch;
 		}
 
 		.op-img {
@@ -377,7 +382,7 @@ $imgSize: 100%;
 				}
 			}
 			.btn {
-				margin-top: 10px;
+				margin-top: 0px;
 				a {
 					font-size: 15px;
 				}
@@ -393,6 +398,9 @@ $imgSize: 100%;
     align-items: center;
 	.justify-content-md-center {
 		margin-top: 70px;
+		@include mobile {
+			margin-top: -30px;
+		}
 	}
 }
 
@@ -408,7 +416,7 @@ $imgSize: 100%;
 @include mobile {
 	.question-block{
 		img {
-			width: 75%;
+			width: 70%;
 			margin: 0 auto 20px;
 		}
 	}
@@ -813,10 +821,12 @@ $imgSize: 100%;
 		padding: 8px 12px;
 		margin-right: 10px;
 		height: 45px;
+		font-size: 13px;
 	}
 	input {
 		height: 45px;
 		padding: 8px 12px;
+		font-size: 13px;
 	}
 	button {
 		height: 45px;
@@ -1177,7 +1187,7 @@ $imgSize: 100%;
 	}
 	.video-block {
 		position: relative;
-		margin-top: 50px;
+		margin-top: 10px;
 		a {
 			color: white;
 			font-size: 22px;
@@ -1191,6 +1201,7 @@ $imgSize: 100%;
 	}
 	.link {
 		text-align: right;
+		margin-bottom: 25px;
 		a {
 			color: $color;
 			font-size: 16px;
@@ -1201,6 +1212,17 @@ $imgSize: 100%;
 			}
 		}
 	} 
+	.speaker {
+		img {
+			width: 20px;
+			margin-right: 10px;
+			margin-bottom: 5px;
+		}
+		font-size: 16px;
+		color: $color;
+		cursor: pointer;
+		display: inline-block;
+	}
 }
 
 
