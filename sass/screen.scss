@@ -335,13 +335,16 @@ $imgSize: 100%;
 //動畫end
 
 @include mobile{
+	body.noscroll {
+		height: 100%;
+		min-height: 100%;
+	}
 	.op-block {
-		// padding-top: 0px;
-		// padding-bottom: 0px;
-		// height: auto;
+		height: 100%;
+		min-height: 100%;
 		.container {
 			height: 100%;
-			padding-top: 90px;
+			padding-top: 40px;
 			padding-bottom: 40px;
 			overflow: scroll;
 		}

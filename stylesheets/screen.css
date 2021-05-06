@@ -310,9 +310,18 @@ h3 {
   }
 }
 @media (max-width: 768px) {
+  body.noscroll {
+    height: 100%;
+    min-height: 100%;
+  }
+
+  .op-block {
+    height: 100%;
+    min-height: 100%;
+  }
   .op-block .container {
     height: 100%;
-    padding-top: 90px;
+    padding-top: 40px;
     padding-bottom: 40px;
     overflow: scroll;
   }
